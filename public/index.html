@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <title>Controle de gastos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="data-compra">
+            <h2 id="titulo-data"> Selecione a data da compra</h2>
+            <input type="date" required>
+        </div>
+        <div class="valor">
+            <h2 id="titulo-valor"> Digite o valor da compra </h2>
+            <input type="number" id="valorCompra" placeholder="0,00">
+        </div>
+        <div class="tipo-gasto">
+            <h2 id="titulo-categoria"> Qual é a categoria da compra?</h2>
+            <select id="categoriaInput" required>
+                <option value="">Selecione...</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Roupas">Roupas</option>
+                <option value="Produtos pessoais">Produtos pessoais</option>
+                <option value="Coisas para casa">Coisas para casa</option>
+                <option value="Mercado">Mercado</option>
+                <option value="Viagens">Viagens</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </div>
+        <div class="metodo-pagamento">
+            <h2 id="titulo-metodo"> Qual método de pagamento foi usado?</h2>
+            <select id="metodoInput" required>
+                <option value="">Selecione...</option>
+                <option value="PixBB">PIX Banco do Brasil</option>
+                <option value="pixCaixa">PIX Caixa</option>
+                <option value="pixBradesco">PIX Bradesco</option>
+                <option value="creditoNubank">Cartão de Crédito - Nubank</option>
+                <option value="creditoBB">Cartão de Crédito - Banco do Brasil</option>
+                <option value="debitoBB">Cartão de Débito - Banco do Brasil</option>
+                <option value="debitoCaixa">Cartão de Débito - Caixa</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+        </div>
+        <div class="parcelas">
+            <h2 id="titulo-parcelas"> Em quantas parcelas foi dividido?</h2>
+            <label for="parcelas_credito" id="label-parcela">Parcelas:</label>
+            <input type="number" id="parcelas" placeholder="Digite quantas parcelas você utilizou">
+            <label for="valor_parcela" id="label-valorParcela">Valor da parcela (R$):</label>
+            <input type="number" id="valorParcela" placeholder="Quanto ficou cada parcela?">
+        </div>
+        <div class="gasto-fixo">
+            <h2 id="titulo-fixo"> É um gasto fixo (mensal/anual)?</h2>
+            <select id="fixoGasto" required>
+                <option value="">Selecione...</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+        <div class="enviar-infos">
+            <button class="enviar">
+                Enviar informações
+            </button>
+        </div>
+        <div class="mensagem-status" id="mensagemStatus">
+        
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

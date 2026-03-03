@@ -1,0 +1,180 @@
+/* Chrome, Edge, Safari */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D3FADE;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    background-color: #C9D0FF;
+    border-radius: 50px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+input{
+    outline: none;
+    border: solid 1px #D3FADE;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #FBEAFF;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+select{
+    outline: none;
+    border: solid 1px #D3FADE;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #FBEAFF;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+
+    background-position: right 15px center;
+}
+#label-valorParcela{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#label-parcela{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#titulo-parcelas{
+    margin-bottom: 10px;
+}
+
+.enviar{
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #FFC996;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.enviar:hover{
+    cursor: pointer;
+    transform: scale(0.98);
+    opacity: 0.8;
+    background-color: #FBEAFF;
+}
+
+.mensagem-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.sucesso {
+    background-color: #D3FADE;
+    color: #7bc27f;
+}
+
+.erro {
+    background-color: #FFD6D6;
+    color: #ea6565;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        padding: 30px;
+        border-radius: 35px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+    }
+
+    .enviar {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input,
+    select {
+        padding: 8px;
+    }
+}
