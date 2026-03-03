@@ -121,3 +121,9 @@ datalistInputs.forEach(input => {
   input.addEventListener("focus", () => input.select());
   input.addEventListener("click", () => input.select());
 });
+
+fetch("/api/gastos")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data); 
+  });
