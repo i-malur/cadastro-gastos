@@ -22,8 +22,8 @@ if (metodoInput) {
       parcelasDiv.style.display = "block";
     } else {
       parcelasDiv.style.display = "none";
-      if (parcelasInput) parcelasInput.value = "";
-      if (valorParcelaInput) valorParcelaInput.value = "";
+      parcelasInput.value = "";
+      valorParcelaInput.value = "";
     }
   });
 }
@@ -83,7 +83,8 @@ if (enviarBtn) {
       })
     })
       .then(res => res.json())
-      .then(() => {
+      .then(data => {
+        console.log(data);
         mostrarMensagem("Gasto registrado com sucesso!", "sucesso");
         limparCampos();
       })
@@ -95,14 +96,14 @@ if (enviarBtn) {
 }
 
 function limparCampos() {
-  if (metodoInput) metodoInput.value = "";
-  if (parcelasDiv) parcelasDiv.style.display = "none";
-  if (valorInput) valorInput.value = "";
-  if (parcelasInput) parcelasInput.value = "";
-  if (valorParcelaInput) valorParcelaInput.value = "";
-  if (categoriaInput) categoriaInput.value = "";
-  if (fixoInput) fixoInput.value = "";
-  if (dataInput) dataInput.value = "";
+  metodoInput.value = "";
+  parcelasDiv.style.display = "none";
+  valorInput.value = "";
+  parcelasInput.value = "";
+  valorParcelaInput.value = "";
+  categoriaInput.value = "";
+  fixoInput.value = "";
+  dataInput.value = "";
 }
 
 function mostrarMensagem(texto, tipo) {
@@ -122,9 +123,10 @@ datalistInputs.forEach(input => {
   input.addEventListener("click", () => input.select());
 });
 
-// buscar gastos (teste)
+
 fetch("/api/gastos")
   .then(res => res.json())
   .then(data => {
-    console.log("Gastos:", data);
-  });
+    console.log("Gastos cadastrados:", data);
+  })
+  .catch(err => console.error(err));
